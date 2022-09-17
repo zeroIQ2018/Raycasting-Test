@@ -3,13 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 public class Exit : MonoBehaviour
 {
-    class Class
+
+    public void QuitGame()
     {
-    static void exitgame()
-    {
-        Debug.Log("exitgame");
-        Application.Quit();
+        
+    #if UNITY_EDITOR
+
+        UnityEditor.EditorApplication.isPlaying = false;
+    #else
+             Application.Quit();
+    #endif
     }
 
-    }
+
 }
