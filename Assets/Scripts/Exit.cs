@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 public class Exit : MonoBehaviour
 {
-
     public void QuitGame()
     {
         
@@ -14,6 +13,4 @@ public class Exit : MonoBehaviour
              Application.Quit();
     #endif
     }
-
-
 }

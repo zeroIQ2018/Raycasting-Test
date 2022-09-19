@@ -11,14 +11,6 @@ public class Event : MonoBehaviour
 
 
 
-
-    void Start()
-    {
-
-    }
-
-
-
     void Update()
     {   
         if (Input.GetKeyDown(KeyCode.E))
@@ -26,7 +18,7 @@ public class Event : MonoBehaviour
             RaycastHit hit;
             
                
-            if (Physics.Raycast(Camera.main.ScreenPointToRay(new Vector3(Screen.width/2,Screen.height/2, Camera.main.nearClipPlane)), out hit, Mathf.Infinity))
+            if (Physics.Raycast(Camera.main.ScreenPointToRay(new Vector3(Screen.width/2,Screen.height/2, Camera.main.nearClipPlane)), out hit, 10))
             {
                 Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hit.distance, Color.yellow);
                 if(hit.collider.CompareTag("Door"))
